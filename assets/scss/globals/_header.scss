@@ -197,20 +197,40 @@
     }
   }
 }
-.menu-button-wrap {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  @include breakpoint(md) {
-    display: none;
-  }
-}
-.mobile-menu-label {
-  margin-top: -10px;
-}
 .mobile-menu-wrapper {
   transform: translateY(-100%);
   @include breakpoint(md) {
     display: none;
+  }
+}
+.collapse {
+  @include breakpoint(md) {
+    animation: collapse 0.5s ease forwards;
+  }
+}
+// Open nav bar on scroll up
+.expand {
+  @include breakpoint(md) {
+    animation: expand 0.5s ease forwards;
+  }
+}
+@keyframes collapse {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes expand {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

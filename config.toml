@@ -3,19 +3,22 @@ languageCode = "en-us"
 title = "Quintessence"
 enableRobotsTXT = true
 disableAliases = true
+# post pagination
+paginate = "6"
 summaryLength = 30
 
 #################### default parameters ################################
 
 [params]
-  logo = "images/logo.jpg"
+  logo = ""
   # Meta data
   description = "Site Description here"
   author = "Quintessence"
   # Contact Information
-  mobile = " "
+  phone = " "
   email = "demo@email.com"
-  location = " "
+  address = " "
+  googleMapLocation = ""
   disallowSearchEngines = true
   # Google Analitycs
   googleAnalytics = " " # Your ID# search 
@@ -67,10 +70,10 @@ summaryLength = 30
 
 [[menu.main]]
     name = "About"
-    url  = "about"
+    url  = "/about/"
     weight = 2
 
 [[menu.main]]
     name = "Blog"
-    url  = "post/"
+    url  = "/blog/"
     weight = 10
